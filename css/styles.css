@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif; /* TENEMOS QUE ELEGIR UNA FUENTE E IMPORTARLA */
+  list-style: none;
   
 }
 
@@ -11,6 +12,7 @@ body {
   background-color: #f4f4f4;
   color: #111;
   line-height: 1.6;
+  margin: 0;
 }
 
 /* HEADER */
@@ -58,17 +60,46 @@ header .logo a {
   text-decoration: none;
 }
 
-/* MENU DE CATEGORIAS */
+/* MENU HORIZONTAL DE CATEGORIAS */
+
+.seccion-nav {
+  display: flex;
+  width: 200px;
+  height: 100vh; /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
+  background-color: #61c030;
+  margin: 0px;
+  justify-content: center;
+}
 .nav-categorias li a{
       text-decoration: none;
+      display: block;
+      padding: 5px;
+      color: #000;
+
+
+}
+
+.nav-categorias li {
+      margin: 10px; /*para que se separen los links de las categoriass*/
+      
+
+}
+.nav-categorias {
+  display: flex;
+  flex-direction: column;
+
+
 }
 
 /* SECCIONES DE PRODUCTOS */
 main {
-  padding: 2rem;
+  display: flex; /*quiero separar la barra lateral del contenido general de la pagina*/
+  padding: 0; /*2rem Maxi te sace esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
   background-color: #fff;
   color: #111;
+  margin: 0px;
 }
+
 
 h2 {
   color: #61c030;
@@ -83,7 +114,9 @@ h2 {
   justify-content: flex-start;
   gap: 1.5rem; /* EXPLICAR A LAS CHICAS */
 }
-
+.productos {
+  padding: 30px;
+}
 .producto {
   background-color: #fafafa;
   border: 1px solid #ddd;
@@ -161,6 +194,18 @@ footer {
   color: #aaa;
 }
 
+/*FORMULARIO DE REGISTRO*/
+.form-registro {
+  display: flex;
+  justify-content: center;
+  background-color: #b9f39d;
+  margin:50px;
+
+
+}
+.form-registro form {
+  flex-direction: column;
+}
 
 @media (max-width: 768px) {
   .contenedor-productos {
