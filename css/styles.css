@@ -60,6 +60,11 @@ header .logo a {
   text-decoration: none;
 }
 
+.nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
 /* MENU HORIZONTAL DE CATEGORIAS */
 
 .seccion-nav {
