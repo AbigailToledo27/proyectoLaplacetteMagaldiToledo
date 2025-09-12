@@ -14,33 +14,38 @@
         <div class="logo">
             <a href="index.html">Nexo</a> <!-- Me gustó el nombre Nexo, creo que combina con la gama de colores -->
         </div>
+
         <!-- CHECKEAR SI ASI LO EXPLICARON EN EL ASYNC -->
-      <!--  <form class="barra-busqueda">
-      <input type="text" placeholder="Buscar productos...">
-      <button type="submit">Buscar</button>
-    </form>  -->
+        <form class="barra-busqueda" action="./category.html" method="GET">
+            <input type="text" placeholder="Buscar productos..." name="category" value="">
+            <button type="submit">Buscar</button>
+        </form>
+
         <nav class="header-nav">
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="registro.html">Registro</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-    
-    <!-- MENÚ DE NAVEGACIÓN HORIZONTAL -->
-     <div class="seccion-nav">
-        <nav class="menu">
-            <ul class="nav-categorias">
-                <li class="category"><a href="./category.html" target="_blank">Categoria 1</a></li>
-                <li class="category"><a href="./category.html" target="_blank">Categoria 2</a></li>
-                <li class="category"><a href="./category.html" target="_blank">Categoria 3</a></li>
-                <li class="category"><a href="./category.html" target="_blank">Categoria 4</a></li>
-                <li class="category"><a href="./category.html" target="_blank">Categoria 5</a></li>
-            </ul><!-- NO SE CUANTAS CATEGORIAS HACEMOS PORQUE EN EL TP HAY 20 CREO, HAGO DE ESAS Y DESPUES VEMOS SINO, aparte dice que solo es necesario una pagina de categorias por eso las vincule  -->
-        
-        </nav>
-    </div>
+
+        <!-- MENÚ DE NAVEGACIÓN HORIZONTAL -->
+        <div class="seccion-nav">
+            <nav class="menu">
+                <ul class="nav-categorias">
+                    <li class="category"><a href="./category.html" target="_blank">Categoria 1</a></li>
+                    <li class="category"><a href="./category.html" target="_blank">Categoria 2</a></li>
+                    <li class="category"><a href="./category.html" target="_blank">Categoria 3</a></li>
+                    <li class="category"><a href="./category.html" target="_blank">Categoria 4</a></li>
+                    <li class="category"><a href="./category.html" target="_blank">Categoria 5</a></li>
+                </ul>
+                <!-- NO SE CUANTAS CATEGORIAS HACEMOS PORQUE EN EL TP HAY 20 CREO, HAGO DE ESAS Y DESPUES VEMOS SINO, aparte dice que solo es necesario una pagina de categorias por eso las vincule  -->
+
+            </nav>
+        </div>
 
         <!-- PRODUCTOS ALEATORIOS -->
         <section class="productos">
@@ -106,7 +111,8 @@
 
             <div class="footer-columna">
                 <h4>Sobre el proyecto</h4>
-                <p>Proyecto integrador de la facultad.<br> <!-- EXPLICAR "<br>" A LAS CHICAS, (sabemos como funciona Maxi, tranqui -atte. Abi) -->
+                <p>Proyecto integrador de la facultad.<br>
+                    <!-- EXPLICAR "<br>" A LAS CHICAS, (sabemos como funciona Maxi, tranqui -atte. Abi) -->
                     Estética inspirada en la estética de Razer.</p>
             </div>
         </div>
