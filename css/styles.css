@@ -271,6 +271,34 @@ footer {
   text-align: center;
 }
 
+/*PÁGINA PRODUCTO*/
+.detalleproducto{
+  display: flex;
+}
+
+.divsproducto{
+  margin: 10px;
+  font-size: 20px;
+}
+
+.nombreproducto{
+  font-size: 40px;
+}
+
+.tagsproducto{
+  font-size: 20px;
+  color: #014902;
+}
+
+.stockproducto{
+  color: #014902;
+  font-size: 25px;
+}
+
+.reviwsproducto{
+  margin: 10px 0 0 0;
+  
+}
 @media (max-width: 768px) {
   .contenedor-productos {
     justify-content: space-around; 
