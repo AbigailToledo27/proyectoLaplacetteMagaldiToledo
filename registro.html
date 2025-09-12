@@ -12,15 +12,18 @@
         <div class="logo">
             <a href="index.html">Nexo</a> <!-- Me gustó el nombre Nexo, creo que combina con la gama de colores -->
         </div>
-        <!-- CHECKEAR SI ASI LO EXPLICARON EN EL ASYNC -->
-        <!-- <form class="barra-busqueda">
-      <input type="text" placeholder="Buscar productos...">
-      <button type="submit">Buscar</button>
-    </form> -->
+
+        <form class="barra-busqueda" action="./category.html" method="GET">
+            <input type="text" placeholder="Buscar productos..." name="category" value="">
+            <button type="submit">Buscar</button>
+        </form>
+
         <nav class="header-nav">
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-          <!--  <a href="registro.html">Registro</a> Les parece sacarlo? porque es la pagina en la que esta-->
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./registro.html">Registro</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -47,6 +50,38 @@
             </form>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h4>Integrantes</h4>
+                <ul>
+                    <li>Máximo Magaldi Freigeiro</li>
+                    <li>Abigail Toledo</li>
+                    <li>Yazmín Laplacette</li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./category.html">Categorías</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Registro</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Sobre el proyecto</h4>
+                <p>Proyecto integrador de la facultad.<br>
+                    <!-- EXPLICAR "<br>" A LAS CHICAS, (sabemos como funciona Maxi, tranqui -atte. Abi) -->
+                    Estética inspirada en la estética de Razer.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Nexo | “Gaga”</p>
+        </div>
+    </footer>
 </body>
 </html>
