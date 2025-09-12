@@ -19,15 +19,66 @@
     </form> -->
         <nav class="header-nav">
             <a href="index.html">Home</a>
-           <!--  <a href="login.html">Login</a> Les parece sacarlo? porque es la pagina en la que esta-->
+            <a href="login.html">Login</a>
             <a href="registro.html">Registro</a>
         </nav>
     </header>
-    <main>
-        <!-- ACA VA EL FORM DE LOGIN -->
+    <main class="mainlogin"> <!-- ACA VA EL FORM DE LOGIN -->
+        <section class="seclogin">
+            <img src="./img/img login - copia.png" alt="imagen login movile" class="imglogind">
+            <img src="./img/img login.png" alt="imagen login desktop" class="imgloginm">
+    
+            <form action="./index.html" method="get" class="formlogin">
+                <h1 class="bienvenido" class="divslogin">BIENVENIDO</h1>
+                <div class="divslogin">
+                    <label for="email"class="labellogin">Email:</label>
+                    <input id="email" type="email" name="email" value=""  class="labellogin">
+                </div>
+                <div class="divslogin">
+                    <label for="contraseña" class="labellogin">Contraseña:</label>
+                    <input id="contraseña" type="password" name="contraseña" value=""  class="labellogin">
+                </div>
+                <div  class="divslogin">
+                <button type="submit" class="botonlogin">INGRESAR</button>
+                <a href="./registro.html" class="linkrlogin">No tengo cuenta</a>
+                </div>
+            </form>
+        </section>
+       
 
         
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h4>Integrantes</h4>
+                <ul>
+                    <li>Máximo Magaldi Freigeiro</li>
+                    <li>Abigail Toledo</li>
+                    <li>Yazmín Laplacette</li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Categorías</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Registro</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4>Sobre el proyecto</h4>
+                <p>Proyecto integrador de la facultad.<br> <!-- EXPLICAR "<br>" A LAS CHICAS, (sabemos como funciona Maxi, tranqui -atte. Abi) -->
+                    Estética inspirada en la estética de Razer.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Nexo | “Gaga”</p>
+        </div>
+    </footer>
 </body>
 </html>

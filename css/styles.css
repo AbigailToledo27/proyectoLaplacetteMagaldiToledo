@@ -207,6 +207,66 @@ footer {
   flex-direction: column;
 }
 
+/*PÁGINA LOGIN*/
+.imgloginm{
+  display: none;
+}
+
+.formlogin{
+  margin: 20px;
+}
+
+.mainlogin{
+  display: flex;
+  justify-content: center;
+  background-color: #61c030;
+}
+
+.seclogin{
+  display: flex;
+  width: 50vw;
+  background-color: #014902;
+  flex-wrap: nowrap;
+  margin: 20px;
+  border-radius: 10%;
+}
+
+.divslogin{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.imglogind{
+  width: 40%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+.labellogin{
+  font-size: 25px;
+  color: #f4f4f4;
+}
+
+.bienvenido{
+  font-size: 40px;
+  color: #f4f4f4;
+  margin: 20px;
+}
+
+.botonlogin{
+  margin: 10px;
+  width: 35%;
+  padding: 2px;
+  align-self: center;
+}
+
+.linkrlogin{
+  color: #f4f4f4;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .contenedor-productos {
     justify-content: space-around; 
