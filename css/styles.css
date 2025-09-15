@@ -199,17 +199,67 @@ footer {
 }
 
 /*FORMULARIO DE REGISTRO*/
+.register-fondo {
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/fondo\ registro.webp);
+  background-size: cover;
+  background-position: center;
+  
+}
 .form-registro {
   display: flex;
   justify-content: center;
+  width: 40vw;
+  height: auto;
   background-color: #b9f39d;
   margin:50px;
-
-
+  padding: 20px 10px 24px;
+  align-items: center;
+  border-radius: 15%;
+  
 }
 .form-registro form {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.form-registro form h1 {
+    margin-bottom: 15px;
+    color: #014902;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.entradas {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.entradas label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600; 
+  text-align: left;
+}
+
+.entradas input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 20px;
+  border: #8acb7a;
+  border-radius: 10px;
+}
+.entradas .check {
+  display: inline;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+
 
 /*PÁGINA LOGIN*/
 .imgloginm{
