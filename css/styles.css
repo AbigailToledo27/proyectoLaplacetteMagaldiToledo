@@ -99,7 +99,7 @@ header .logo a {
 /* SECCIONES DE PRODUCTOS */
 main {
   display: flex; /*quiero separar la barra lateral del contenido general de la pagina*/
-  padding: 0; /*2rem Maxi te sace esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
+  padding: 0; /*2rem Maxi te saque esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
   background-color: #fff;
   color: #111;
   margin: 0px;
