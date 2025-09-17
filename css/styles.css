@@ -271,6 +271,8 @@ footer {
   justify-content: center;
   background-color: #61c030;
   background-image: url(../img/fondo\ registro.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .seclogin{
