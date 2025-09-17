@@ -262,10 +262,6 @@ footer {
 
 
 /*PÁGINA LOGIN*/
-.imgloginm{
-  display: none;
-}
-
 .formlogin{
   margin: 20px;
 }
@@ -274,6 +270,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #61c030;
+  background-image: url(../img/fondo\ registro.webp);
 }
 
 .seclogin{
@@ -347,10 +344,38 @@ footer {
 
 .reviwsproducto{
   margin: 10px 0 0 0;
-  
+  color: rgb(88, 87, 87);
 }
+.nombre{
+  text-decoration: underline;
+  color: rgb(39, 38, 38);
+}
+
+.rating{
+  color: #014902;
+}
+
 @media (max-width: 768px) {
   .contenedor-productos {
     justify-content: space-around; 
   }
+
+  /*Login*/
+
+  .imglogind{
+    display: none;
+  }
+
+/*Producto*/
+.detalleproducto{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+.fotoproducto{
+  width:100vw;
+  margin: 5px;
+}
+
 }
