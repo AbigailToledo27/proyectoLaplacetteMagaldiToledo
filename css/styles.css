@@ -70,7 +70,7 @@ header .logo a {
 .seccion-nav {
   display: flex;
   width: 200px;
-  height: 100vh; /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
+  height: 100%; /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
   background-color: #61c030;
   margin: 0px;
   justify-content: center;
@@ -79,11 +79,18 @@ header .logo a {
       text-decoration: none;
       display: block;
       padding: 5px;
-      color: #000;
+      color: greenyellow;
+      text-transform: capitalize;
 
 
 }
+.menu h3 {
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: #014902;
 
+}
 .nav-categorias li {
       margin: 10px; /*para que se separen los links de las categoriass*/
       
@@ -270,7 +277,7 @@ footer {
   font-weight: bold;
 }
 .boton-reg {
-  width: 1005;
+  width: 100%;
   padding: 10px;
   background-color: #014902;
   color: #fafafa;
@@ -278,7 +285,55 @@ footer {
   font-weight: bold;
 }
 
+/*PAGINA CATEGORIAS*/
+.main_category {
+  display: flex;
+  flex-direction: column; /*para que cada seccion que trabaje quede una denajo de la otra*/
+}
 
+.main_category section {
+  margin-bottom: 20px;
+}
+.portada_category img{
+  width: 100%;
+}
+
+.main_category section h1{
+  text-align: center;
+  font-weight: bold;
+  size: 40px;
+  margin-bottom: 30px;
+  color: white;
+  text-decoration: underline;
+  background-image: url(../img/img\ login.png);
+  padding: 20px;
+}
+.name_category{
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.categorias {
+  display: flex;
+  flex-direction: row; /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
+  background-color: #8acb7a;
+}
+
+.categorias article img {
+  width: 70%;
+  margin: 15px;
+  
+}
+.categorias article{
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12%;
+  text-align: center;
+  text-transform: capitalize;
+}
 
 /*PÁGINA LOGIN*/
 .formlogin{
