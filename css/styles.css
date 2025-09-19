@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif; /* TENEMOS QUE ELEGIR UNA FUENTE E IMPORTARLA */
+  font-family: "Roboto", sans-serif;
+  /* TENEMOS QUE ELEGIR UNA FUENTE E IMPORTARLA */
   list-style: none;
-  
 }
 
 body {
@@ -37,7 +37,8 @@ header .logo a {
   display: flex;
 }
 
-.barra-busqueda input { /* EXPLICAR A LAS CHICAS */
+.barra-busqueda input {
+  /* EXPLICAR A LAS CHICAS */
   padding: 0.5rem;
   border: none;
   border-radius: 4px 0 0 4px;
@@ -52,6 +53,7 @@ header .logo a {
   cursor: pointer; /* EXPLICAR A LAS CHICAS */
   border-radius: 0 4px 4px 0;
 }
+
 /* FIN DEL IGNORAR (por ahora) */
 
 .header-nav a {
@@ -70,43 +72,44 @@ header .logo a {
 .seccion-nav {
   display: flex;
   width: 200px;
-  height: 100%; /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
+  height: 100%;
+  /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
   background-color: #61c030;
   margin: 0px;
   justify-content: center;
 }
-.nav-categorias li a{
-      text-decoration: none;
-      display: block;
-      padding: 5px;
-      color: greenyellow;
-      text-transform: capitalize;
 
-
+.nav-categorias li a {
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  color: greenyellow;
+  text-transform: capitalize;
 }
+
 .menu h3 {
   margin: 5px;
   font-weight: bold;
   text-align: center;
   color: #014902;
-
 }
+
 .nav-categorias li {
-      margin: 10px; /*para que se separen los links de las categoriass*/
-      
-
+  margin: 10px;
+  /*para que se separen los links de las categoriass*/
 }
+
 .nav-categorias {
   display: flex;
   flex-direction: column;
-
-
 }
 
 /* SECCIONES DE PRODUCTOS */
 main {
-  display: flex; /*quiero separar la barra lateral del contenido general de la pagina*/
-  padding: 0; /*2rem Maxi te saque esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
+  display: flex;
+  /*quiero separar la barra lateral del contenido general de la pagina*/
+  padding: 0;
+  /*2rem Maxi te saque esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
   background-color: #fff;
   color: #111;
   margin: 0px;
@@ -124,11 +127,13 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 1.5rem; /* EXPLICAR A LAS CHICAS */
+  gap: 1.5rem; /* EXPLICAR A LAS CHICAS */ 
 }
+
 .productos {
   padding: 30px;
 }
+
 .producto {
   background-color: #fafafa;
   border: 1px solid #ddd;
@@ -212,34 +217,33 @@ footer {
   background-image: url(../img/fondo\ registro.webp);
   background-size: cover;
   background-position: center;
-  
 }
+
 .form-registro {
   display: flex;
   justify-content: center;
   width: 40vw;
   height: auto;
   background-color: #8acb7a;
-  margin:50px;
+  margin: 50px;
   padding: 20px 10px 24px;
   align-items: center;
   border-radius: 15%;
-  
 }
+
 .form-registro form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  
 }
 
 .form-registro form h1 {
-    margin-bottom: 15px;
-    color: #014902;
-    text-align: center;
-    text-transform: uppercase;
-    
+  margin-bottom: 15px;
+  color: #014902;
+  text-align: center;
+  text-transform: uppercase;
+
 }
 
 .entradas {
@@ -250,7 +254,7 @@ footer {
 .entradas label {
   display: block;
   margin-bottom: 5px;
-  font-weight: 600; 
+  font-weight: 600;
   text-align: left;
 }
 
@@ -262,20 +266,21 @@ footer {
   border-radius: 10px;
 }
 
-
 .checkbox {
   display: flex;
   align-items: center;
 }
+
 .checkbox input {
   width: auto;
   margin-right: 10px;
 }
 
-.checkbox span{
+.checkbox span {
   font-size: 10px;
   font-weight: bold;
 }
+
 .boton-reg {
   width: 100%;
   padding: 10px;
@@ -288,17 +293,19 @@ footer {
 /*PAGINA CATEGORIAS*/
 .main_category {
   display: flex;
-  flex-direction: column; /*para que cada seccion que trabaje quede una denajo de la otra*/
+  flex-direction: column;
+  /*para que cada seccion que trabaje quede una denajo de la otra*/
 }
 
 .main_category section {
   margin-bottom: 20px;
 }
-.portada_category img{
+
+.portada_category img {
   width: 100%;
 }
 
-.main_category section h1{
+.main_category section h1 {
   text-align: center;
   font-weight: bold;
   size: 40px;
@@ -308,24 +315,27 @@ footer {
   background-image: url(../img/img\ login.png);
   padding: 20px;
 }
-.name_category{
-    text-align: center;
-    font-weight: bold;
+
+.name_category {
+  text-align: center;
+  font-weight: bold;
 
 }
 
 .categorias {
   display: flex;
-  flex-direction: row; /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
+  flex-direction: row;
+  /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
   background-color: #8acb7a;
 }
 
 .categorias article img {
   width: 70%;
   margin: 15px;
-  
+
 }
-.categorias article{
+
+.categorias article {
   display: block;
   margin: 20px;
   padding: 10px;
@@ -336,11 +346,11 @@ footer {
 }
 
 /*PÁGINA LOGIN*/
-.formlogin{
+.formlogin {
   margin: 20px;
 }
 
-.mainlogin{
+.mainlogin {
   display: flex;
   justify-content: center;
   background-color: #61c030;
@@ -349,7 +359,7 @@ footer {
   background-position: center;
 }
 
-.seclogin{
+.seclogin {
   display: flex;
   width: 50vw;
   background-color: #014902;
@@ -358,38 +368,38 @@ footer {
   border-radius: 10%;
 }
 
-.divslogin{
+.divslogin {
   display: flex;
   flex-direction: column;
   margin: 5px;
   font-size: 16px;
 }
 
-.imglogind{
+.imglogind {
   width: 40%;
   height: 100%;
   border-radius: 10%;
 }
 
-.labellogin{
+.labellogin {
   font-size: 25px;
   color: #f4f4f4;
 }
 
-.bienvenido{
+.bienvenido {
   font-size: 40px;
   color: #f4f4f4;
   margin: 20px;
 }
 
-.botonlogin{
+.botonlogin {
   margin: 10px;
   width: 35%;
   padding: 2px;
   align-self: center;
 }
 
-.linkrlogin{
+.linkrlogin {
   color: #f4f4f4;
   text-align: center;
 }
@@ -415,63 +425,63 @@ footer {
 
 
 /*PÁGINA PRODUCTO*/
-.detalleproducto{
+.detalleproducto {
   display: flex;
+  padding: 2.5vh 5% 0px 5%;
 }
 
-.divsproducto{
+.divsproducto {
   margin: 10px;
   font-size: 20px;
 }
 
-.nombreproducto{
+.nombreproducto {
   font-size: 40px;
 }
 
-.tagsproducto{
+.tagsproducto {
   font-size: 20px;
   color: #014902;
 }
 
-.stockproducto{
+.stockproducto {
   color: #014902;
   font-size: 25px;
 }
 
-.reviwsproducto{
+.reviwsproducto {
   margin: 10px 0 0 0;
   color: rgb(88, 87, 87);
 }
-.nombre{
+
+.nombre {
   text-decoration: underline;
   color: rgb(39, 38, 38);
 }
 
-.rating{
+.rating {
   color: #014902;
 }
 
 @media (max-width: 768px) {
   .contenedor-productos {
-    justify-content: space-around; 
+    justify-content: space-around;
   }
 
   /*Login*/
-
-  .imglogind{
+  .imglogind {
     display: none;
   }
 
-/*Producto*/
-.detalleproducto{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column-reverse;
-}
+  /*Producto*/
+  .detalleproducto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
 
-.fotoproducto{
-  width:100vw;
-  margin: 5px;
-}
-
+  .fotoproducto {
+    width: 85vw;
+    margin: 5px;
+  }
 }
