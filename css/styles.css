@@ -72,7 +72,6 @@ header .logo a {
 .seccion-nav {
   display: flex;
   width: 200px;
-  height: 100%;
   /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
   background-color: #61c030;
   margin: 0px;
@@ -126,8 +125,7 @@ h2 {
 .contenedor-productos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 1.5rem; /* EXPLICAR A LAS CHICAS */ 
+  justify-content: center;
 }
 
 .productos {
@@ -137,14 +135,22 @@ h2 {
 .producto {
   background-color: #fafafa;
   border: 1px solid #ddd;
-  padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  width: 22%;
+  min-width: 220px;
+  max-width: 250px;
+  padding: 1rem;
+  margin: 10px;
 }
 
 .producto img {
-  max-width: 100%;
+  width: 100%;
+  height: 140px;        
+  object-fit: cover; 
   border-radius: 8px;
+  margin-bottom: 10px;
+  background: #e6ffe6; 
 }
 
 .precio {
@@ -484,4 +490,33 @@ footer {
     width: 85vw;
     margin: 5px;
   }
+
+  .producto {
+    width: 95%;
+    min-width: 120px;
+    max-width: 100%;
+  }
+
+  header {
+    flex-direction: column; /* logo, buscador y nav uno debajo del otro */
+    align-items: center;
+    gap: 10px; /* separación entre bloques */
+  }
+
+  .barra-busqueda {
+    width: 100%;          /* ocupa todo el ancho disponible */
+    max-width: 400px;     /* no más de 400px */
+  }
+
+  .barra-busqueda input {
+    flex: 1; /* se estira para usar el espacio */
+  }
+
+  .header-nav ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* por si los links no entran en una fila */
+  }
 }
+
