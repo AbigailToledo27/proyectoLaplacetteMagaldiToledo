@@ -20,35 +20,39 @@
 
         <nav class="header-nav">
             <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./registro.html">Registro</a></li>
+                <li><a href="./index.html" target="_blank">Home</a></li>
+                <li><a href="./login.html" target="_blank">Login</a></li>
+                <li><a href="./registro.html" target="_blank">Registro</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="register-fondo">
         <!-- ACA VA EL FORM DE REGISTRO -->
-        <div  class="form-registro">
-            <form action="registro.html" method="get">
-                <div>
-                    <label for="email">Email:</label>
-                    <input id="email" type="email" name="email" value="">
-                </div>
-                <div>
-                    <label for="contraseña">Contraseña:</label>
-                    <input id="contraseña" type="password" name="contraseña" value="">
-                </div>
-                <div>
-                    <label for="repetir">Repetir Contraseña:</label>
-                    <input id="repetir" type="password" name="repetir" value="">
-                </div>
-                <div>
-                    <label for="aceptacion">Acepto los terminos y condiciones</label>
-                    <input id="aceptacion" type="checkbox" name="aceptacion" value="">
-                </div>
+        <section  class="form-registro">
 
+            <form action="registro.html" method="get">
+                <h1>Registrate</h1>
+                <div class="entradas">
+                    <label for="email" >Email:</label>
+                    <input class="email" id="email" type="email" name="email" value="">
+                </div>
+                <div class="entradas">
+                    <label for="contraseña" >Contraseña:</label>
+                    <input class="pass1" id="contraseña" type="password" name="contraseña" value="">
+                </div>
+                <div class="entradas">
+                    <label for="repetir" >Repetir Contraseña:</label>
+                    <input class="pass2" id="repetir" type="password" name="repetir" value="">
+                </div>
+                <div class="entradas checkbox">
+                    <input class="boxcheck" id="aceptacion" type="checkbox" name="aceptacion" value="">
+                    <span>Acepto los terminos y condiciones</span>
+                </div>
+                <div class="entradas">
+                    <button type="submit" class="boton-reg" >Registrarme</button>
+                </div>
             </form>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="footer-contenido">

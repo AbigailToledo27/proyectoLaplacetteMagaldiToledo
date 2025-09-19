@@ -70,7 +70,7 @@ header .logo a {
 .seccion-nav {
   display: flex;
   width: 200px;
-  height: 100vh; /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
+  height: 100%; /*quiero que la categoria tome todo el alto de la pantalla para que quede fijo*/
   background-color: #61c030;
   margin: 0px;
   justify-content: center;
@@ -79,11 +79,18 @@ header .logo a {
       text-decoration: none;
       display: block;
       padding: 5px;
-      color: #000;
+      color: greenyellow;
+      text-transform: capitalize;
 
 
 }
+.menu h3 {
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: #014902;
 
+}
 .nav-categorias li {
       margin: 10px; /*para que se separen los links de las categoriass*/
       
@@ -99,7 +106,7 @@ header .logo a {
 /* SECCIONES DE PRODUCTOS */
 main {
   display: flex; /*quiero separar la barra lateral del contenido general de la pagina*/
-  padding: 0; /*2rem Maxi te sace esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
+  padding: 0; /*2rem Maxi te saque esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
   background-color: #fff;
   color: #111;
   margin: 0px;
@@ -199,23 +206,136 @@ footer {
 }
 
 /*FORMULARIO DE REGISTRO*/
+.register-fondo {
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/fondo\ registro.webp);
+  background-size: cover;
+  background-position: center;
+  
+}
 .form-registro {
   display: flex;
   justify-content: center;
-  background-color: #b9f39d;
+  width: 40vw;
+  height: auto;
+  background-color: #8acb7a;
   margin:50px;
-
-
+  padding: 20px 10px 24px;
+  align-items: center;
+  border-radius: 15%;
+  
 }
 .form-registro form {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.form-registro form h1 {
+    margin-bottom: 15px;
+    color: #014902;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.entradas {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.entradas label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600; 
+  text-align: left;
+}
+
+.entradas input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 20px;
+  border: #8acb7a;
+  border-radius: 10px;
+}
+
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.checkbox span{
+  font-size: 10px;
+  font-weight: bold;
+}
+.boton-reg {
+  width: 100%;
+  padding: 10px;
+  background-color: #014902;
+  color: #fafafa;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/*PAGINA CATEGORIAS*/
+.main_category {
+  display: flex;
+  flex-direction: column; /*para que cada seccion que trabaje quede una denajo de la otra*/
+}
+
+.main_category section {
+  margin-bottom: 20px;
+}
+.portada_category img{
+  width: 100%;
+}
+
+.main_category section h1{
+  text-align: center;
+  font-weight: bold;
+  size: 40px;
+  margin-bottom: 30px;
+  color: white;
+  text-decoration: underline;
+  background-image: url(../img/img\ login.png);
+  padding: 20px;
+}
+.name_category{
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.categorias {
+  display: flex;
+  flex-direction: row; /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
+  background-color: #8acb7a;
+}
+
+.categorias article img {
+  width: 70%;
+  margin: 15px;
+  
+}
+.categorias article{
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12%;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 /*PÁGINA LOGIN*/
-.imgloginm{
-  display: none;
-}
-
 .formlogin{
   margin: 20px;
 }
@@ -224,6 +344,9 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #61c030;
+  background-image: url(../img/fondo\ registro.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .seclogin{
@@ -317,10 +440,38 @@ footer {
 
 .reviwsproducto{
   margin: 10px 0 0 0;
-  
+  color: rgb(88, 87, 87);
 }
+.nombre{
+  text-decoration: underline;
+  color: rgb(39, 38, 38);
+}
+
+.rating{
+  color: #014902;
+}
+
 @media (max-width: 768px) {
   .contenedor-productos {
     justify-content: space-around; 
   }
+
+  /*Login*/
+
+  .imglogind{
+    display: none;
+  }
+
+/*Producto*/
+.detalleproducto{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+.fotoproducto{
+  width:100vw;
+  margin: 5px;
+}
+
 }
