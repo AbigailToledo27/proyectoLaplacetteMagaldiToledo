@@ -271,6 +271,26 @@ footer {
   text-align: center;
 }
 
+/* PÁGINA SEARCH-RESULTS */
+
+.search-results {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.search-results h2 {
+  color: #61c030;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #61c030;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.sin-results {
+  display: none;
+}
+
+
 /*PÁGINA PRODUCTO*/
 .detalleproducto{
   display: flex;
