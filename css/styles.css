@@ -126,11 +126,13 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color:#8acb7a;
 }
 
 .productos {
   padding: 30px;
 }
+
 
 .producto {
   background-color: #fafafa;
