@@ -343,6 +343,8 @@ footer {
   flex-direction: row;
   /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
   background-color: #8acb7a;
+  justify-content: space-around;
+  
 }
 
 .categorias article img {
@@ -356,9 +358,11 @@ footer {
   margin: 20px;
   padding: 10px;
   background-color: white;
-  border-radius: 12%;
+  border-radius: 8px;
   text-align: center;
   text-transform: capitalize;
+  width: 22%;
+  
 }
 
 /*PÁGINA LOGIN*/
@@ -512,6 +516,18 @@ footer {
   /*Registro*/
   .form-registro{
     width: 80vw;
+
+  }
+
+  /*Categorias*/
+  .categorias {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .categorias article{
+    width: 90%;
   }
 
   /*Producto*/
