@@ -126,10 +126,15 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color:#8acb7a;
 }
 
 .productos {
   padding: 30px;
+}
+
+.banner_robot img{ /*esta linea es para acomodar la imagen del banner*/
+  width:100%;
 }
 
 .producto {
@@ -234,7 +239,7 @@ footer {
   margin: 50px;
   padding: 20px 10px 24px;
   align-items: center;
-  border-radius: 15%;
+  border-radius: 40px;
 }
 
 .form-registro form {
@@ -295,7 +300,12 @@ footer {
   border-radius: 10px;
   font-weight: bold;
 }
-
+.cuenta_bt {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
 /*PAGINA CATEGORIAS*/
 .main_category {
   display: flex;
@@ -333,6 +343,8 @@ footer {
   flex-direction: row;
   /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
   background-color: #8acb7a;
+  justify-content: space-around;
+  
 }
 
 .categorias article img {
@@ -346,9 +358,11 @@ footer {
   margin: 20px;
   padding: 10px;
   background-color: white;
-  border-radius: 12%;
+  border-radius: 8px;
   text-align: center;
   text-transform: capitalize;
+  width: 22%;
+  
 }
 
 /*PÁGINA LOGIN*/
@@ -368,10 +382,10 @@ footer {
 .seclogin {
   display: flex;
   width: 50vw;
-  background-color: #014902;
+  background-color: #8acb7a;
   flex-wrap: nowrap;
   margin: 20px;
-  border-radius: 10%;
+  border-radius: 40px;
 }
 
 .divslogin {
@@ -384,17 +398,20 @@ footer {
 .imglogind {
   width: 40%;
   height: 100%;
-  border-radius: 10%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .labellogin {
   font-size: 25px;
-  color: #f4f4f4;
+  color: #014902;
+  padding: 10px 12px; 
+  border-radius: 10px;
 }
 
 .bienvenido {
   font-size: 40px;
-  color: #f4f4f4;
+  color: #014902;
   margin: 20px;
 }
 
@@ -403,6 +420,10 @@ footer {
   width: 35%;
   padding: 2px;
   align-self: center;
+  background-color: #014902;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #f4f4f4;
 }
 
 .linkrlogin {
@@ -433,12 +454,16 @@ footer {
 /*PÁGINA PRODUCTO*/
 .detalleproducto {
   display: flex;
-  padding: 2.5vh 5% 0px 5%;
+  padding: 20px 35px 0px 35px;
 }
 
 .divsproducto {
   margin: 10px;
   font-size: 20px;
+}
+
+.category{
+    color: #014902;
 }
 
 .nombreproducto {
@@ -451,8 +476,9 @@ footer {
 }
 
 .stockproducto {
-  color: #014902;
+  color: #61c030;
   font-size: 25px;
+  font-weight: bold;
 }
 
 .reviwsproducto {
@@ -466,10 +492,10 @@ footer {
 }
 
 .rating {
-  color: #014902;
+  color: #61c030;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .contenedor-productos {
     justify-content: space-around;
   }
@@ -479,11 +505,37 @@ footer {
     display: none;
   }
 
+  .seclogin{
+    width: 80vw;
+  }
+
+  .divslogin{
+    width: 80%;
+  }
+
+  /*Registro*/
+  .form-registro{
+    width: 80vw;
+
+  }
+
+  /*Categorias*/
+  .categorias {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .categorias article{
+    width: 90%;
+  }
+
   /*Producto*/
   .detalleproducto {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    padding: 5px;
   }
 
   .fotoproducto {
