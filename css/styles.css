@@ -133,6 +133,9 @@ h2 {
   padding: 30px;
 }
 
+.banner_robot img{ /*esta linea es para acomodar la imagen del banner*/
+  width:100%;
+}
 
 .producto {
   background-color: #fafafa;
@@ -297,7 +300,12 @@ footer {
   border-radius: 10px;
   font-weight: bold;
 }
-
+.cuenta_bt {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
 /*PAGINA CATEGORIAS*/
 .main_category {
   display: flex;
