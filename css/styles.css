@@ -32,17 +32,14 @@ header .logo a {
   text-decoration: none;
 }
 
-/* IGNORAR (por ahora) */
 .barra-busqueda {
   display: flex;
 }
 
 .barra-busqueda input {
-  /* EXPLICAR A LAS CHICAS */
   padding: 0.5rem;
   border: none;
   border-radius: 4px 0 0 4px;
-  outline: none;
 }
 
 .barra-busqueda button {
@@ -53,8 +50,6 @@ header .logo a {
   cursor: pointer; /* EXPLICAR A LAS CHICAS */
   border-radius: 0 4px 4px 0;
 }
-
-/* FIN DEL IGNORAR (por ahora) */
 
 .header-nav a {
   margin-left: 1rem;
@@ -83,7 +78,7 @@ header .logo a {
   display: block;
   padding: 5px;
   color: greenyellow;
-  text-transform: capitalize;
+  text-transform: capitalize; /* ESTUDIAR, ESTO ES PARA QUE LA PRIMERA LETRA DE LA PALABRA SEA MAYÚSCULA */
 }
 
 .menu h3 {
@@ -108,7 +103,6 @@ main {
   display: flex;
   /*quiero separar la barra lateral del contenido general de la pagina*/
   padding: 0;
-  /*2rem Maxi te saque esto porque me molestaba que no quede bien el menu horizontal, de ultima lo vemos*/
   background-color: #fff;
   color: #111;
   margin: 0px;
@@ -134,7 +128,7 @@ h2 {
 }
 
 .banner_robot img{ /*esta linea es para acomodar la imagen del banner*/
-  width:100%;
+  width: 100%;
 }
 
 .producto {
@@ -152,7 +146,7 @@ h2 {
 .producto img {
   width: 100%;
   height: 140px;        
-  object-fit: cover; 
+  /* object-fit: cover;  QUEDA MÁS LINDO CON ESTO PERO NO LO VIMOS EN CLASE, LO SACO */
   border-radius: 8px;
   margin-bottom: 10px;
   background: #e6ffe6; 
@@ -186,11 +180,11 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem; /* EXPLICAR A LAS CHICAS */
 }
 
 .footer-columna {
   width: 200px;
+  margin: 0 0 10px 0;
 }
 
 .footer-columna h4 {
@@ -225,7 +219,7 @@ footer {
 .register-fondo {
   display: flex;
   justify-content: center;
-  background-image: url(../img/fondo\ registro.webp);
+  background-image: url("../img/fondo/registro.webp");
   background-size: cover;
   background-position: center;
 }
@@ -253,8 +247,7 @@ footer {
   margin-bottom: 15px;
   color: #014902;
   text-align: center;
-  text-transform: uppercase;
-
+  text-transform: uppercase; /* ESTO ES PARA QUE EL TEXTO SEA MAYÚSCULA */
 }
 
 .entradas {
@@ -328,14 +321,13 @@ footer {
   margin-bottom: 30px;
   color: white;
   text-decoration: underline;
-  background-image: url(../img/img\ login.png);
+  background-image: url("../img/img/login.png");
   padding: 20px;
 }
 
 .name_category {
   text-align: center;
   font-weight: bold;
-
 }
 
 .categorias {
@@ -344,13 +336,11 @@ footer {
   /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
   background-color: #8acb7a;
   justify-content: space-around;
-  
 }
 
 .categorias article img {
   width: 70%;
   margin: 15px;
-
 }
 
 .categorias article {
@@ -362,7 +352,6 @@ footer {
   text-align: center;
   text-transform: capitalize;
   width: 22%;
-  
 }
 
 /*PÁGINA LOGIN*/
@@ -374,14 +363,15 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #61c030;
-  background-image: url(../img/fondo\ registro.webp);
+  background-image: url("../img/fondo/registro.webp");
   background-size: cover;
   background-position: center;
 }
 
 .seclogin {
   display: flex;
-  width: 50vw;
+  width: 90vw;
+  max-width: 650px;
   background-color: #8acb7a;
   flex-wrap: nowrap;
   margin: 20px;
@@ -397,7 +387,7 @@ footer {
 
 .imglogind {
   width: 40%;
-  height: 100%;
+  /* height: 100%;  NO SE USA PORCENTAJES EN HEIGHT, LO VUELO */
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -550,23 +540,26 @@ footer {
   }
 
   header {
-    flex-direction: column; /* logo, buscador y nav uno debajo del otro */
+    flex-direction: column;
     align-items: center;
-    gap: 10px; /* separación entre bloques */
   }
 
   .barra-busqueda {
-    width: 100%;          /* ocupa todo el ancho disponible */
-    max-width: 400px;     /* no más de 400px */
+    width: 100%;
+    max-width: 400px;
   }
 
   .barra-busqueda input {
-    flex: 1; /* se estira para usar el espacio */
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .barra-busqueda button {
+    margin: 10px 0;
   }
 
   .header-nav ul {
     display: flex;
-    gap: 10px;
     justify-content: center;
     flex-wrap: wrap; /* por si los links no entran en una fila */
   }
