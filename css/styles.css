@@ -219,7 +219,7 @@ footer {
 .register-fondo {
   display: flex;
   justify-content: center;
-  background-image: url("../img/fondo/registro.webp");
+  background-image: url("../img/fondo_registro.webp");
   background-size: cover;
   background-position: center;
 }
@@ -321,7 +321,7 @@ footer {
   margin-bottom: 30px;
   color: white;
   text-decoration: underline;
-  background-image: url("../img/img/login.png");
+  background-image: url("../img/fondo_login");
   padding: 20px;
 }
 
@@ -363,7 +363,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #61c030;
-  background-image: url("../img/fondo/registro.webp");
+  background-image: url("../img/fondo_registro.webp");
   background-size: cover;
   background-position: center;
 }
