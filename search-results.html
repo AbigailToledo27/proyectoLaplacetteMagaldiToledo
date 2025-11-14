@@ -14,10 +14,13 @@
             <a href="index.html">Nexo</a>
         </div>
 
-        <form class="barra-busqueda" action="./search-results.html" method="GET">
-            <input type="text" placeholder="Buscar productos..." name="category" value="">
-            <button type="submit">Buscar</button>
-        </form>
+         <div>
+            <form class="barra-busqueda" action="./search-results.html" method="GET">
+                <input type="text" placeholder="Buscar productos..." name="search" id="searchInput" value="">
+                <button type="submit">Buscar</button>
+            </form>
+            <p class="error-message">Estas GAGA, pone algo de texto para buscar</p>
+        </div>
 
         <nav class="header-nav">
             <ul class="nav-links">
@@ -33,13 +36,13 @@
             <h2>Resultados de búsqueda para: "Auriculares"</h2> <!-- Dejo ejemplo de uno de muestra y con js hacemos que vaya cambiando segun la palabra buecada -->
             <div class="contenedor-productos">
 
-                <article class="producto">
+                <!-- <article class="producto">
                     <img src="./img/Auris inalambricos.png" alt="Producto 1">
                     <h3>Auriculares Inalámbricos</h3>
                     <p>Xiaomi Redmi Buds 6 Play Negro. Con un peso de 3,6g, súper ligero</p>
                     <p class="precio">$21.199</p>
                     <a href="./product.html" class="boton-detalle">Ver detalle</a>
-                </article>
+                </article> -->
             </div>
 
             <div class="sin-results">
@@ -83,6 +86,7 @@
             <p>© 2025 Nexo | “Gaga”</p>
         </div>
     </footer>
+    <script src="./js/search-results.js"></script>
 </body>
 
 </html>

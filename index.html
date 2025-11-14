@@ -16,10 +16,13 @@
         </div>
 
         <!-- CHECKEAR SI ASI LO EXPLICARON EN EL ASYNC -->
-        <form class="barra-busqueda" action="./search-results.html" method="GET">
-            <input type="text" placeholder="Buscar productos..." name="category" value="">
-            <button type="submit">Buscar</button>
-        </form>
+        <div>
+            <form class="barra-busqueda" action="./search-results.html" method="GET">
+                <input type="text" placeholder="Buscar productos..." name="search" id="searchInput" value="">
+                <button type="submit">Buscar</button>
+            </form>
+            <p class="error-message"></p>
+        </div>
 
         <nav class="header-nav">
             <ul class="nav-links">
