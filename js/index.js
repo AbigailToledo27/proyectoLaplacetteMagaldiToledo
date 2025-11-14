@@ -30,7 +30,7 @@ fetch(url)
     for (let i = 0; i < data.length; i++) {
         barraCategory += 
         `
-        <li class="category"><a href="${data[i].url}">${data[i].name}</a></li>
+        <li class="category"><a href="./category.html?category=${data[i].name}">${data[i].name}</a></li>
         `;
     }
     infoCategory.innerHTML = barraCategory; 
