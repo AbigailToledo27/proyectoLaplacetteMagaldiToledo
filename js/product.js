@@ -8,40 +8,41 @@ fetch(`https://dummyjson.com/products/${id}`)
         return res.json();
     })
     .then(function(info){
-        let data = info
-        let nombreprod = document.querySelector('.nombreproducto')
-        nombreprod.innerText = data.title
-        let descrip = document.querySelector('.descripción')
-        descrip.innerText = data.description
-        let stock = document.querySelector('.stockproducto')
-        stock.innerText += data.stock
-        let nomusuario1 = document.querySelector('.usuario1')
-        nomusuario1.innerText = data.reviews[0].reviewerName
-        let fechacomentario1 = document.querySelector('.fecha1')
-        fechacomentario1.innerText = data.reviews[0].date
-        let comentario1 = document.querySelector('.opinion1')
-        comentario1.innerText = data.reviews[0].comment
-        let rating1 = document.querySelector('.rating1')
-        rating1.innerText += data.reviews[0].rating
-        let nomusuario2 = document.querySelector('.usuario2')
-        nomusuario2.innerText = data.reviews[1].reviewerName
-        let fechacomentario2 = document.querySelector('.fecha2')
-        fechacomentario2.innerText = data.reviews[1].date
-        let comentario2 = document.querySelector('.opinion2')
-        comentario2.innerText = data.reviews[1].comment
-        let rating2 = document.querySelector('.rating2')
-        rating2.innerText += data.reviews[1].rating
-        let imagen = document.querySelector('.fotoproducto')
-        imagen.src = data.images
-        let categoria = document.querySelector('.category')
-        categoria.innerText += data.category
-        let precio = document.querySelector('.precioprod')
-        precio.innerText += data.price
-        let tags = document.querySelector('.tagsproducto')
-        tags.innerText = data.tags
-    })
-    .catch(function(err){
-        console.log("Error" + err);
+        let productoInfo = info
+        console.log(data);
         
+        let producto = document.querySelector(".detalleproducto")
+
+        let carga = ` <div class="divsproducto">
+        <img src=${info.images[0]} alt="foto detalle de producto" class="fotoproducto">
+        <h3><a href="./category.html" class="category">Categoría: </a></h3>
+        <h2 class="precioprod">Precio: </h2>
+        <p class="tagsproducto"></p>
+    </div>
+    <div class="divsproducto">
+        <div>
+        <h1 class="nombreproducto"></h1>
+        <h2 class="titulodescripción">Descripción:</h2>
+        <p class="descripción"></p>
+        <p class="stockproducto">Stock: </p>
+    </div> 
+    <div class="reviwsproducto">
+        <h3 class="nombre reviews">Reviews de Usuarios:</h3>
+        <p class="usuario1 nombre"></p> 
+        <p class="fecha1"></p>
+        <p class="opinion1"></p>
+        <p class="rating1">Rating: </p>
+        <p class="usuario2 nombre"></p>
+        <p class="fecha2"></p>
+        <p class="opinion2"></p>
+        <p class="rating2">Rating: </p>
+    </div>
+    </div>`
+    producto.innerHTML = carga 
+
     })
-    
+    .catch(function (err) {
+        console.log("Error" + err);
+
+    })
+
