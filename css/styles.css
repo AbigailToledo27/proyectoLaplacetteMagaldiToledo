@@ -368,6 +368,11 @@ footer {
 }
 
 /*PÁGINA LOGIN*/
+.error{
+  display: none;
+  color: red;
+}
+
 .formlogin {
   margin: 20px;
 }
@@ -459,6 +464,7 @@ footer {
 .detalleproducto {
   display: flex;
   padding: 20px 35px 0px 35px;
+  background-color: #fafafa;
 }
 
 .divsproducto {
@@ -497,6 +503,10 @@ footer {
 
 .rating {
   color: #61c030;
+}
+
+.fotoproducto{
+  max-width: 60vw;
 }
 
 @media (max-width: 450px) {
