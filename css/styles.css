@@ -343,6 +343,7 @@ footer {
 .categorias {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   /*para que los articulos de cada categoria se ubiquen uno al lado del otro*/
   background-color: #8acb7a;
   justify-content: space-around;
