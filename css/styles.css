@@ -16,6 +16,10 @@ body {
 }
 
 /* HEADER */
+.usuarioSaludo{
+  color: #61c030;
+}
+
 header {
   display: flex;
   justify-content: space-between;
