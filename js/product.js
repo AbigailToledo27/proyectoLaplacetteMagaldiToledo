@@ -9,10 +9,6 @@ fetch(`https://dummyjson.com/products/${id}`)
     })
     .then(function (info) {
         let productoInfo = info
-        console.log(productoInfo); // Para ver la info de la api, después hay q borrarlo
-        //Oka, doy el aprobado para borrar
-
-        // Linea 22 --> Quiero agregarle un for para q todos los tags tengan su #, si no queda feito
 
         let producto = document.querySelector(".detalleproducto")
         let tagsProducto = "";
@@ -30,6 +26,7 @@ fetch(`https://dummyjson.com/products/${id}`)
             <div class="divsproducto">
                 <div>
                     <h1 class="nombreproducto">${productoInfo.title}</h1>
+                    <h2 class="titulodescripción">Marca: ${productoInfo.brand}</h2>
                     <h2 class="titulodescripción">Descripción:</h2>
                     <p class="descripción">${productoInfo.description}</p>
                     <p class="stockproducto">Stock: ${productoInfo.stock}</p>
@@ -45,7 +42,9 @@ fetch(`https://dummyjson.com/products/${id}`)
                         <p class="opinion">${productoInfo.reviews[i].comment}</p>
                         <p class="rating">Rating: ${productoInfo.reviews[i].rating}</p>
                      </div>
-                `}; //</div> queda abierto el div grande... esta mal en cuestión syntaxis perooooo anda REVISAR
+                `}; 
+        
+        carga += `</div>`;
 
 
         producto.innerHTML = carga
