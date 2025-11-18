@@ -9,12 +9,12 @@ formulario.addEventListener("submit", function(evento){
         let erroremail = document.querySelector(".email")
         erroremail.innerText = "El campo es obligatorio, no puede estar vacío"
         erroremail.style.display = "block"
-        return erroremail
+        return erroremail // Me explican por que el return aca?
     }else if (pass.value == ""){
         let errorpass = document.querySelector(".contraseña")
         errorpass.innerText = "El campo es obligatorio, no puede estar vacío"
         errorpass.style.display = "block"
-        return errorpass
+        return errorpass //x2
     } else if (pass.value.length < 6){
         let errorcarac = document.querySelector(".caracteres")
         errorcarac.innerText = "La contraseña debe tener al menos 6 caracteres"

@@ -1,9 +1,8 @@
 let identificador = location.search;
 let identificadorObj = new URLSearchParams(identificador);
-
 let inputBusqueda = document.getElementById('searchInput');
-let mensajeError = document.querySelector('.error-message');
 
+let mensajeError = document.querySelector('.error-message');
 let mensajeSinResultados = document.querySelector('.sin-results');
 
 let espacioProductos = document.querySelector('.contenedor-productos');
@@ -12,7 +11,6 @@ let busqueda = identificadorObj.get('search');
 let formHeader = document.querySelector('.barra-busqueda');
 formHeader.addEventListener('submit', function(event){
     event.preventDefault();
-    //inputBusqueda.value.length DEVUELVE EL LARGO DEL TEXTO
     if (inputBusqueda.value.length < 3) {
         mensajeError.style.display = 'block';
         if (inputBusqueda.value === "") {
@@ -54,6 +52,5 @@ fetch(`https://dummyjson.com/products/search?q=${busqueda}`)
     })
     .catch(function(err){
         console.log("Error" + err);
-        
     })
     

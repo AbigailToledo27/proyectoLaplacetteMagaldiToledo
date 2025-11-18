@@ -3,23 +3,29 @@ let identificadorObj = new URLSearchParams(identificador);
 
 let id = identificadorObj.get('id');
 
-fetch(`https://dummyjson.com/products/${id}`) 
-    .then(function(res){
+fetch(`https://dummyjson.com/products/${id}`)
+    .then(function (res) {
         return res.json();
     })
-    .then(function(info){
+    .then(function (info) {
         let productoInfo = info
         console.log(productoInfo); // Para ver la info de la api, después hay q borrarlo
-        
+        //Oka, doy el aprobado para borrar
+
         // Linea 22 --> Quiero agregarle un for para q todos los tags tengan su #, si no queda feito
-        
-        let producto = document.querySelector(".detalleproducto") 
+
+        let producto = document.querySelector(".detalleproducto")
+        let tagsProducto = "";
+        for (let i = 0; i < productoInfo.tags.length; i++) {
+            const element = productoInfo.tags[i];
+            tagsProducto += `#${element} `;
+        }
 
         let carga = `<div class="divsproducto">
                 <img src=${productoInfo.images[0]} alt="foto detalle de producto" class="fotoproducto">
                 <h3><a href="./category.html" class="category">Categoría: ${productoInfo.category} </a></h3>
                 <h2 class="precioprod">Precio: ${productoInfo.price}</h2>
-                <p class="tagsproducto">#${productoInfo.tags[0]} #${productoInfo.tags[1]}</p> 
+                <p class="tagsproducto">${tagsProducto}</p> 
             </div>
             <div class="divsproducto">
                 <div>
@@ -29,10 +35,10 @@ fetch(`https://dummyjson.com/products/${id}`)
                     <p class="stockproducto">Stock: ${productoInfo.stock}</p>
                 </div>
             `
-        
-                for (let i=0; i<productoInfo.reviews.length; i++){
-                    carga += //Para q se agreguen a carga todos los reviews 
-                    `<div class="reviwsproducto">
+
+        for (let i = 0; i < productoInfo.reviews.length; i++) {
+            carga += `
+                    <div class="reviwsproducto">
                         <h3 class="nombre reviews">Reviews de Usuarios:</h3>
                         <p class="usuario nombre">${productoInfo.reviews[i].reviewerName}</p> 
                         <p class="fecha">${productoInfo.reviews[i].date}</p>
@@ -40,9 +46,9 @@ fetch(`https://dummyjson.com/products/${id}`)
                         <p class="rating">Rating: ${productoInfo.reviews[i].rating}</p>
                      </div>
                 `}; //</div> queda abierto el div grande... esta mal en cuestión syntaxis perooooo anda REVISAR
-        
-        
-        producto.innerHTML = carga 
+
+
+        producto.innerHTML = carga
 
     })
     .catch(function (err) {
@@ -50,17 +56,18 @@ fetch(`https://dummyjson.com/products/${id}`)
 
     })
 
+
+// Barra de búsqueda
 let inputBusqueda = document.getElementById('searchInput');
 let mensajeError = document.querySelector('.error-message');
 let formHeader = document.querySelector('.barra-busqueda');
 
-formHeader.addEventListener('submit', function(event){
+formHeader.addEventListener('submit', function (event) {
     event.preventDefault();
-    //inputBusqueda.value.length DEVUELVE EL LARGO DEL TEXTO
     if (inputBusqueda.value.length < 3) {
         mensajeError.style.display = 'block';
         if (inputBusqueda.value === "") {
-            mensajeError.innerText = 'Estas GAGA, pone algo de texto para buscar';
+            mensajeError.innerText = 'Estas GAGA, pone algo de texto para buscar'; //Preguntar si este texto está bien o es DEMASIADO FORMAL para el TP
         }
         else {
             mensajeError.innerText = 'La búsqueda debe tener al menos 3 caracteres';

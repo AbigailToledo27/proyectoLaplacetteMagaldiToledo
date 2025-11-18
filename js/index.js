@@ -44,6 +44,7 @@ fetch(url)
 })
 
 
+// Productos de la home
 function cargarProductosPorCategoria(caja, categoria) {
   fetch(`https://dummyjson.com/products/category/${categoria}`)
   .then(function(response) {
@@ -74,5 +75,6 @@ function cargarProductosPorCategoria(caja, categoria) {
   })
 }
 
+// categorías harcodeadas
 cargarProductosPorCategoria(cajaProductos[0], "mobile-accessories");
 cargarProductosPorCategoria(cajaProductos[1], "vehicle");
