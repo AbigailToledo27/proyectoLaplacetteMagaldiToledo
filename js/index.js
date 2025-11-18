@@ -1,9 +1,11 @@
 let url = "https://dummyjson.com/products/categories";
+let cajaProductos = document.querySelectorAll(".contenedor-productos");
 
 // Barra de Busqueda
 let inputBusqueda = document.getElementById('searchInput');
 let mensajeError = document.querySelector('.error-message');
 let formHeader = document.querySelector('.barra-busqueda');
+
 formHeader.addEventListener('submit', function(event){
     event.preventDefault();
     //inputBusqueda.value.length DEVUELVE EL LARGO DEL TEXTO
@@ -40,3 +42,37 @@ fetch(url)
 .catch(function(error) {
   console.log("Error: " + error);
 })
+
+
+function cargarProductosPorCategoria(caja, categoria) {
+  fetch(`https://dummyjson.com/products/category/${categoria}`)
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(data) {
+     let productos = data.products ;
+     let cardProductos = "";
+     for (let i = 0; i < productos.length; i++) {
+      cardProductos += `
+          <article class="producto">
+                  <div>
+                      <img src="${productos[i].images[0]}" alt="${productos[i].title}">
+                      <h3>${productos[i].title}</h3>
+                      <p>${productos[i].description}</p>
+                  </div>
+                  <div>
+                      <p class="precio">Precio: ${productos[i].price}</p>
+                      <a href="./product.html?id=${productos[i].id}" class="boton-detalle">Ver detalle</a>
+                  </div>
+          </article>
+      `}
+      caja.innerHTML = cardProductos;
+  
+  })
+  .catch(function(error) {
+    console.log("Error: " + error);
+  })
+}
+
+cargarProductosPorCategoria(cajaProductos[0], "mobile-accessories");
+cargarProductosPorCategoria(cajaProductos[1], "vehicle");
