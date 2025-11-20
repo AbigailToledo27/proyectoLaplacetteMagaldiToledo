@@ -30,23 +30,27 @@
         <!-- ACA VA EL FORM DE REGISTRO hay que hacer que aparezca un Alert pero mas bonito si el usuario no completa los casilleros obligatorios-->
         <section  class="form-registro">
 
-            <form action="./login.html" method="get">
+            <form action="./login.html" method="get" class="formRegister">
                 <h1>Registrate</h1>
                 <div class="entradas">
                     <label for="email" >Email:</label>
-                    <input class="email" id="email" type="email" name="email" value="" required>
+                    <input class="email" id="email" type="email" name="email" value="">
+                    <p class="errorEmail"></p>
                 </div>
                 <div class="entradas">
                     <label for="contraseña" >Contraseña:</label>
-                    <input class="pass1" id="contraseña" type="password" name="contraseña" value="" required>
+                    <input class="pass1" id="contraseña" type="password" name="contraseña" value="">
+                    <p class="errorPassUno"></p>
                 </div>
                 <div class="entradas">
                     <label for="repetir" >Repetir Contraseña:</label>
-                    <input class="pass2" id="repetir" type="password" name="repetir" value="" required>
+                    <input class="pass2" id="repetir" type="password" name="repetir" value="">
+                    <p class="errorPassDos"></p>
                 </div>
                 <div class="entradas checkbox">
-                    <input class="boxcheck" id="aceptacion" type="checkbox" name="aceptacion" value="" required>
+                    <input class="boxcheck" id="aceptacion" type="checkbox" name="aceptacion" value="">
                     <span>Acepto los terminos y condiciones</span>
+                    <p class="checkTerminos"></p>
                 </div>
                 <div class="entradas">
                     <button type="submit" class="boton-reg" >Registrarme</button>
@@ -90,5 +94,6 @@
             <p>© 2025 Nexo | “Gaga”</p>
         </div>
     </footer>
+    <script src="./js/registro.js"></script>
 </body>
 </html>
