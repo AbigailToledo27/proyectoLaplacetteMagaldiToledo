@@ -35,7 +35,6 @@ fetch(`https://dummyjson.com/products/search?q=${busqueda}`)
     })
     .then(function(info){
         let productos = info.products
-        console.log(productos);
         if (productos.length === 0) {
             mensajeSinResultados.style.display = 'block';
             mensajeSinResultados.innerText += (" '" + busqueda + "'")

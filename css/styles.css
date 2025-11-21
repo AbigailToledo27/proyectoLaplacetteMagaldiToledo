@@ -118,7 +118,6 @@ main {
   margin: 0px;
 }
 
-
 h2 {
   color: #61c030;
   margin-bottom: 1rem;
@@ -313,17 +312,20 @@ footer {
   border-radius: 10px;
   font-weight: bold;
 }
+
 .cuenta_bt {
   display: block;
   color: white;
   text-align: center;
   margin-top: 10px;
 }
+
+
 /*PAGINA CATEGORIAS*/
 .main_category {
   display: flex;
   flex-direction: column;
-  /*para que cada seccion que trabaje quede una denajo de la otra*/
+  /*para que cada seccion que trabaje quede una debajo de la otra*/
 }
 
 .main_category section {
@@ -416,7 +418,6 @@ footer {
 
 .imglogind {
   width: 40%;
-  /* height: 100%;  NO SE USA PORCENTAJES EN HEIGHT, LO VUELO */
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -460,8 +461,8 @@ footer {
   text-decoration: none;
   color: white;
 }
-/* PÁGINA SEARCH-RESULTS */
 
+/* PÁGINA SEARCH-RESULTS */
 .search-results {
   padding: 30px;
   background-color: #fff;
@@ -478,7 +479,6 @@ footer {
 .sin-results {
   display: none;
 }
-
 
 /*PÁGINA PRODUCTO*/
 .detalleproducto {

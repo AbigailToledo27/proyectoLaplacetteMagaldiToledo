@@ -4,8 +4,6 @@ let mail = localStorage.getItem("email")
 let saludo = document.querySelector(".usuarioSaludo")
 let logoutNav = document.querySelector(".navlogout")
 
-console.log(mail)
-
 
 if(mail){
     header.style.display = "none"
