@@ -51,6 +51,21 @@ function repeatPassValida() {
     return true 
 }
 
+function estaCheckeado() {
+    if (aceptarCheck.checked) {
+        noCheckTerminos.display = "none"
+        return true;
+    }
+    else {
+        noCheckTerminos.display = "block"
+        noCheckTerminos.innerText = "Aceptá los terminos y condiciones."
+        noCheckTerminos.style.color = "red"
+    }
+}
+
+aceptarCheck.addEventListener("click", function(e){
+    estaCheckeado()
+})
 
 email.addEventListener("input", function (evento) {
     if (emailValido()) {
@@ -81,8 +96,9 @@ form.addEventListener("submit", function (evento) {
     let emailValidado = emailValido(evento);
     let passValidado = passValida(evento);
     let repeatPassValidado = repeatPassValida(evento);
+    let checked = estaCheckeado()
 
-    if (emailValidado && passValidado && repeatPassValidado) {
+    if (emailValidado && passValidado && repeatPassValidado && checked) {
         this.submit()
     }
 })

@@ -10,8 +10,9 @@ console.log(mail)
 if(mail){
     header.style.display = "none"
     saludo.style.display = "inline-block"
+    saludo.style.fontSize = "14px"
     saludo.innerHTML += ` ${mail}`
-    logoutNav.style.display = "inline-block"
+    logoutNav.style.display = "flex"
 }
 else {
     header.style.display = "block"
