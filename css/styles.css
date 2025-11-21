@@ -20,6 +20,12 @@ body {
   color: #61c030;
 }
 
+.botonLogout{
+  margin-left: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
