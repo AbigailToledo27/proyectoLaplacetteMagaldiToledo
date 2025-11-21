@@ -19,7 +19,7 @@ fetch(`https://dummyjson.com/products/${id}`)
 
         let carga = `<div class="divsproducto">
                 <img src=${productoInfo.images[0]} alt="foto detalle de producto" class="fotoproducto">
-                <h3><a href="./category.html" class="category">Categoría: ${productoInfo.category} </a></h3>
+                <h3><a href="./category.html?category=${productoInfo.category}" class="category">Categoría: ${productoInfo.category} </a></h3>
                 <h2 class="precioprod">Precio: ${productoInfo.price}</h2>
                 <p class="tagsproducto">${tagsProducto}</p> 
             </div>
@@ -32,18 +32,21 @@ fetch(`https://dummyjson.com/products/${id}`)
                     <p class="stockproducto">Stock: ${productoInfo.stock}</p>
                 </div>
             `
+        carga += `<div class="reviwsproducto">
+                        <h3 class="nombre reviews">Reviews de Usuarios:</h3>
+                   </div> `
+
 
         for (let i = 0; i < productoInfo.reviews.length; i++) {
             carga += `
                     <div class="reviwsproducto">
-                        <h3 class="nombre reviews">Reviews de Usuarios:</h3>
                         <p class="usuario nombre">${productoInfo.reviews[i].reviewerName}</p> 
                         <p class="fecha">${productoInfo.reviews[i].date}</p>
                         <p class="opinion">${productoInfo.reviews[i].comment}</p>
                         <p class="rating">Rating: ${productoInfo.reviews[i].rating}</p>
                      </div>
-                `}; 
-        
+                `};
+
         carga += `</div>`;
 
 
@@ -57,7 +60,7 @@ fetch(`https://dummyjson.com/products/${id}`)
 
 
 // Barra de búsqueda
-let inputBusqueda = document.getElementById('searchInput');
+let inputBusqueda = document.querySelector('#searchInput');
 let mensajeError = document.querySelector('.error-message');
 let formHeader = document.querySelector('.barra-busqueda');
 

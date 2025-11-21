@@ -26,7 +26,7 @@ fetch(url)
                     <p>${productos[i].description}</p>
                 </div>
                 <div>
-                    <p class="precio">Precio: ${productos[i].price}</p>
+                    <p class="precio">Precio: $${productos[i].price}</p>
                     <a href="./product.html?id=${productos[i].id}" class="boton-detalle">Ver detalle</a>
                 </div>
         </article>
@@ -38,7 +38,7 @@ fetch(url)
   console.log("Error: " + error);
 })
 
-let inputBusqueda = document.getElementById('searchInput');
+let inputBusqueda = document.querySelector('#searchInput');
 let mensajeError = document.querySelector('.error-message');
 let formHeader = document.querySelector('.barra-busqueda');
 

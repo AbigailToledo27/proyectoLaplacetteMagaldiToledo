@@ -61,6 +61,14 @@ password.addEventListener("input", function (evento) {
     if (passValida()) {
         errorPass.style.display = "none";
     }
+    if (!repeatPassValida()) {
+        errorRepetirPass.innerText = "Las contraseñas no coinciden";
+        errorRepetirPass.style.display = "block";
+        errorRepetirPass.style.color = "red";
+    }
+    else{
+        errorRepetirPass.style.display = "none";
+    }
 })
 repeatPass.addEventListener("input", function (evento) {
     if (repeatPassValida()) {

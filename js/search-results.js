@@ -1,12 +1,16 @@
 let identificador = location.search;
 let identificadorObj = new URLSearchParams(identificador);
-let inputBusqueda = document.getElementById('searchInput');
+let inputBusqueda = document.querySelector('#searchInput');
+
 
 let mensajeError = document.querySelector('.error-message');
 let mensajeSinResultados = document.querySelector('.sin-results');
 
 let espacioProductos = document.querySelector('.contenedor-productos');
 let busqueda = identificadorObj.get('search');
+
+let resultadosDe = document.querySelector('#resultados');
+resultadosDe.innerText += (" " + busqueda);
 
 let formHeader = document.querySelector('.barra-busqueda');
 formHeader.addEventListener('submit', function(event){
@@ -34,6 +38,7 @@ fetch(`https://dummyjson.com/products/search?q=${busqueda}`)
         console.log(productos);
         if (productos.length === 0) {
             mensajeSinResultados.style.display = 'block';
+            mensajeSinResultados.innerText += (" '" + busqueda + "'")
         }
         else {
             for (let i = 0; i < productos.length; i++) {

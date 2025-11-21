@@ -2,7 +2,7 @@ let url = "https://dummyjson.com/products/categories";
 let cajaProductos = document.querySelectorAll(".contenedor-productos");
 
 // Barra de Busqueda
-let inputBusqueda = document.getElementById('searchInput');
+let inputBusqueda = document.querySelector('#searchInput');
 let mensajeError = document.querySelector('.error-message');
 let formHeader = document.querySelector('.barra-busqueda');
 

@@ -11,15 +11,16 @@
 <body>
     <header>
         <div class="logo">
-            <a href="index.html">Nexo</a>
+            <a href="index.html">Nexo</a> <!-- Me gustó el nombre Nexo, creo que combina con la gama de colores -->
         </div>
 
-         <div>
+        <!-- CHECKEAR SI ASI LO EXPLICARON EN EL ASYNC -->
+        <div>
             <form class="barra-busqueda" action="./search-results.html" method="GET">
                 <input type="text" placeholder="Buscar productos..." name="search" id="searchInput" value="">
                 <button type="submit">Buscar</button>
             </form>
-            <p class="error-message">Estas GAGA, pone algo de texto para buscar</p>
+            <p class="error-message"></p>
         </div>
 
         <nav class="header-nav">
@@ -29,6 +30,13 @@
                 <li><a href="./registro.html">Registro</a></li>
             </ul>
         </nav>
+        <h3 class = "usuarioSaludo">Bienvenid@: </h3> <!---Los links para el formato logout-->
+            <nav class="navlogout">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a class= "botonLogout" >Logout</a></li>
+                </ul>
+            </nav>
     </header>
 
     <main class="main_category">
