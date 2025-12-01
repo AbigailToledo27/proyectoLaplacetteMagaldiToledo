@@ -20,7 +20,7 @@ fetch(`https://dummyjson.com/products/${id}`)
         let carga = `<div class="divsproducto">
                 <img src=${productoInfo.images[0]} alt="foto detalle de producto" class="fotoproducto">
                 <h3><a href="./category.html?category=${productoInfo.category}" class="category">Categoría: ${productoInfo.category} </a></h3>
-                <h2 class="precioprod">Precio: ${productoInfo.price}</h2>
+                <h2 class="precioprod">Precio: $${productoInfo.price}</h2>
                 <p class="tagsproducto">${tagsProducto}</p> 
             </div>
             <div class="divsproducto">

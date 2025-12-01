@@ -62,7 +62,7 @@ function cargarProductosPorCategoria(caja, categoria) {
                       <p>${productos[i].description}</p>
                   </div>
                   <div>
-                      <p class="precio">Precio: ${productos[i].price}</p>
+                      <p class="precio">Precio:$${productos[i].price}</p>
                       <a href="./product.html?id=${productos[i].id}" class="boton-detalle">Ver detalle</a>
                   </div>
           </article>

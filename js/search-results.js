@@ -41,7 +41,7 @@ fetch(`https://dummyjson.com/products/search?q=${busqueda}`)
         }
         else {
             for (let i = 0; i < productos.length; i++) {
-                producto = productos[i];
+                let producto = productos[i];
                 espacioProductos.innerHTML += `
                 <article class="producto">
                     <img src="${producto.images[0]}" alt="${producto.title}">
